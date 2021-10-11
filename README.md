@@ -10,7 +10,9 @@ Place the glove txt in the word2vec folder
 Place the full unpacked stanfordsentiment folder in raw/sst_1/
 
 run ```python preprocess/sst1_clean.py```
+
 move the new train_orig.txt file to size_data_t1/4_full/sst2/
+
 move the new test.txt to size_data_t1/test/sst2/
 
 now you can run the experiments starting with:
