@@ -27,6 +27,8 @@ from os import listdir
 from os.path import isfile, join, isdir
 import pickle
 
+huge_word2vec = os.getcwd() + "/preprocess/word2vec_dutch_pickle.p"
+result_folder = os.getcwd() + "/results"
 #import data augmentation methods
 # from nlp_aug import *
 
@@ -82,7 +84,7 @@ def get_all_txt_paths(master_folder):
 def gen_vocab_dicts(folder, output_pickle_path, huge_word2vec):
 
     vocab = set()
-    text_embeddings = KeyedVectors.load(r"C:\Users\20174868\Desktop\NLP_Code\preprocess\word2vec_dutch_pickle.p")
+    text_embeddings = KeyedVectors.load(huge_word2vec)
     # text_embeddings = open(huge_word2vec, 'r').readlines()
     word2vec = {}
 

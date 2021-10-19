@@ -53,24 +53,10 @@ def run_model(train_file, test_file, num_classes, input_size, percent_dataset, w
 def compute_baselines(writer):
 
 	performances = []
-	#baseline computation
-	# for size_folder in size_folders:
-
-		#get all six datasets
-	dataset_folder = 'C:/Users/20174868/Desktop/NLP_Code/data'
-		
-		
-		#for each dataset
-		
-
-			#initialize all the variables
-		# dataset_folder = dataset_folders[i]
-			# dataset = datasets[i]
-			#num_classes = num_classes_list[i]
-			# input_size = input_size_list[i]
+	
+	dataset_folder = os.getcwd() + "/data"
 			
-	# word2vec_pickle = 'C:/Users/20174868/Desktop/NLP_Code/preprocess/word2vec_dutch_pickle.p'
-	word2vec = KeyedVectors.load(r"C:\Users\20174868\Desktop\NLP_Code\preprocess\word2vec_dutch_pickle.p")
+	word2vec = KeyedVectors.load(huge_word2vec)
 
 	train_path = dataset_folder + '/test.txt'
 	test_path = dataset_folder + '/train_orig.txt'
@@ -87,7 +73,7 @@ def compute_baselines(writer):
 
 if __name__ == "__main__":
 
-	writer = open(r"C:\Users\20174868\Desktop\NLP_Code\data\accuracys_rnn.txt", 'w')
+	writer = open(result_folder + "/accuracys_rnn.txt", 'w')
 
 	for i in range(10, 24):
 

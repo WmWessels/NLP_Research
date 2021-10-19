@@ -1,5 +1,4 @@
 #user inputs
-
 #load hyperparameters
 # sizes = ['4_full']#['1_tiny', '2_small', '3_standard', '4_full']
 # size_folders = ['size_data_t1/' + size for size in sizes]
@@ -20,8 +19,10 @@ n_aug_list_dict = {'size_data_t1/1_tiny': [32, 32, 32, 32, 32],
 input_size_list = [50, 50, 40, 25, 25]
 
 #word2vec dictionary
-huge_word2vec = "C:/Users/20174868/Desktop/NLP_Code/preprocess/word2vec_dutch_pickle"
+# huge_word2vec = huge_word2vec
+# "C:/Users/20174868/Desktop/NLP_Code/preprocess/word2vec_dutch_pickle"
 word2vec_len = 300
+
 
 # from gensim.models import KeyedVectors
 # from gensim import models
