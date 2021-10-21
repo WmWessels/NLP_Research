@@ -1,4 +1,5 @@
 import glob
+import re
 
 neg = 0
 pos = 0
@@ -10,8 +11,41 @@ with open('train_orig.txt', 'w', encoding="utf8") as outfile:
 
         with open(f, encoding="utf8") as infile:
             rev = infile.read()
-            r = rev.splitlines(True)
-            if (len(r) <= 1):
+            words = rev.split(' ')
+            if(len(words) <= 50):
+                rev = re.sub(r'http\S+',' ',rev)
+                
+                rev = rev.replace('\n',' ')
+                rev = rev.replace('\t', ' ')
+                rev = rev.replace('-', ' ')
+                rev = rev.replace('.', ' ')
+                rev = rev.replace(':', ' ')
+
+                rev = rev.replace(',', ' ')
+                rev = rev.replace("'", '')
+                rev = rev.replace("\"", '')
+                rev = rev.replace('!', ' ')
+                rev = rev.replace('?', ' ')
+
+                rev = rev.replace('(', ' ')
+                rev = rev.replace(')', ' ')
+
+                rev = rev.replace('[', ' ')
+                rev = rev.replace(']', ' ')
+
+                rev = rev.replace('{', ' ')
+                rev = rev.replace('}', ' ')
+
+                rev = rev.replace(';', ' ')
+                rev = rev.replace('/', ' ')
+
+                rev = rev.replace('\\', ' ')
+                rev = rev.replace('_', ' ')
+                rev = rev.replace('+', ' ')
+                rev = rev.replace('&', ' en ')
+
+                clean_rev = re.sub(' +',' ',rev) #delete extra spaces
+                clean_rev = clean_rev.lower()
                 
                 scoreText = f.split('_')[1].split('.')[0]
                 score = int(scoreText)
@@ -21,6 +55,7 @@ with open('train_orig.txt', 'w', encoding="utf8") as outfile:
                 else: 
                     neg += 1 
                     scoreText = '0'
-                outfile.write(scoreText+'\t'+rev+'\n')
-                print("total neg: "+str(neg))
-                print("total pos: "+str(pos))
+                if (rev.strip()):
+                    outfile.write(scoreText+'\t'+clean_rev+'\n')
+print("total neg: "+str(neg))
+print("total pos: "+str(pos))
