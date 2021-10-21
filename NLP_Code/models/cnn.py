@@ -2,6 +2,7 @@ from methods import *
 from numpy.random import seed
 seed(0)
 from e_config import *
+import os
 
 ###############################
 #### run model and get acc ####
@@ -54,9 +55,9 @@ def compute_baselines(writer):
 	#baseline computation
 	performances = []
 	
-	dataset_folder = 'C:/Users/20174868/Desktop/NLP_Code/data'
+	dataset_folder = os.getcwd() + "/data"
 			
-	word2vec = KeyedVectors.load(r"C:\Users\20174868\Desktop\NLP_Code\preprocess\word2vec_dutch_pickle.p")
+	word2vec = KeyedVectors.load(huge_word2vec)
 
 	train_path = dataset_folder + '/test.txt'
 	test_path = dataset_folder + '/train_orig.txt'
@@ -73,7 +74,7 @@ def compute_baselines(writer):
 
 if __name__ == "__main__":
 
-	writer = open(r"C:\Users\20174868\Desktop\NLP_Code\data\accuracys_cnn.txt", 'w')
+	writer = open(result_folder+"/accuracys_cnn.txt", 'w')
 
 	for i in range(10, 24):
 
