@@ -1,7 +1,7 @@
 from methods import *
 from numpy.random import seed
 seed(0)
-from e_config import *
+from config import *
 
 from gensim.models import KeyedVectors
 ###############################
@@ -50,7 +50,7 @@ def run_model(train_file, test_file, num_classes, input_size, percent_dataset, w
 ### get baseline accuracies ###
 ###############################
 
-def compute_baselines(writer):
+def compute_baselines(writer, train_name):
 
 	performances = []
 	
@@ -58,8 +58,8 @@ def compute_baselines(writer):
 			
 	word2vec = KeyedVectors.load(huge_word2vec)
 
-	train_path = dataset_folder + '/test.txt'
-	test_path = dataset_folder + '/train_orig.txt'
+	train_path = dataset_folder + train_name
+	test_path = dataset_folder + '/test.txt'
 	acc = run_model(train_path, test_path, 2, 50, 1, word2vec) ##changed to 2
 	performances.append(str(acc))
 
@@ -73,10 +73,14 @@ def compute_baselines(writer):
 
 if __name__ == "__main__":
 
-	writer = open(result_folder + "/accuracys_rnn.txt", 'w')
+	for size in dataset_sizes:
+		for alpha in alphas:
+			for augs in aug_sizes:
+				training_path = f"/train_{size}_alpha_{alpha}_aug_{augs}"
+				writer = open(result_folder + f"/accuracys_rnn_{size}_{alpha}_{augs}.txt", 'w')
 
-	for i in range(10, 24):
+				for i in range(10, 24):
 
-		seed(i)
-		print(i)
-		compute_baselines(writer)
+					seed(i)
+					print(i)
+					compute_baselines(writer, training_path)

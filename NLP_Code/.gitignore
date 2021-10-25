@@ -1,2 +1,5 @@
 *.p
 *.p.vectors.npy
+
+data/*
+eda_datasets/*
