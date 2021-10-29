@@ -53,3 +53,4 @@ In this section we would like to acknowledge and thank the authors of the [EDA: 
 Also the creator of [DBRD: Dutch Book Reviews Dataset](https://github.com/benjaminvdb/DBRD) for providing one of the best datasets for sentiment analysis available to the public.
 
 Last but definitely not least, we'd like to thank our professor and guide at the TU/e M. Fang for his advice, feedback and input during the weekly meetings.
+
