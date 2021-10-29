@@ -8,9 +8,9 @@ The work and code done in this repo is based off of the research paper:
 
 Not included in this repo but required to run:
 
-    - [OpenDutchWordnet](https://github.com/cltl/OpenDutchWordnet)
+    [OpenDutchWordnet](https://github.com/cltl/OpenDutchWordnet)
     
-    - [DBRD: Dutch Book Reviews Dataset](https://github.com/benjaminvdb/DBRD)
+    [DBRD: Dutch Book Reviews Dataset](https://github.com/benjaminvdb/DBRD)
 
 ## Directory Structure
 ```
