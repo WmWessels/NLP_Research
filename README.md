@@ -36,11 +36,15 @@ Not included in this repo but required to run:
 ## How to run
 
 You will need to install certain dependencies.
+
 Obviously needed are Python, Keras (and Tensorflow) as well as installing NLTK through pip.
 
 Run the filtering and size splitting first on the DBRD dataset, the resulting datasets should be put into the Data folder
+
 From there you can run augment.py on the desired file.
+
 Within config.py specify the sizes, alphas and augs for filename purposes.
+
 Within cnn.py and rnn.py, specifiy the desired path and then run.
 
 # Acknowledgements
