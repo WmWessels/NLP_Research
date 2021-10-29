@@ -3,9 +3,9 @@
 # sizes = ['4_full']#['1_tiny', '2_small', '3_standard', '4_full']
 # size_folders = ['size_data_t1/' + size for size in sizes]
 
-dataset_sizes = [500, 1000, 1500, 3000]
+dataset_sizes = [3000]
 alphas = ["005", "01", "02", "03", "04", "05"]
-aug_sizes = [16, 8, 4]
+aug_sizes = [8]
 
 #datasets
 datasets = ['cr', 'sst2', 'subj', 'trec', 'pc']
