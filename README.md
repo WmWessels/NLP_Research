@@ -48,4 +48,8 @@ Within config.py specify the sizes, alphas and augs for filename purposes.
 Within cnn.py and rnn.py, specifiy the desired path and then run.
 
 # Acknowledgements
-todo
+In this section we would like to acknowledge and thank the authors of the [EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks](https://arxiv.org/abs/1901.11196) and their work done which formed the basis of this project. 
+
+Also the creator of [DBRD: Dutch Book Reviews Dataset](https://github.com/benjaminvdb/DBRD) for providing one of the best datasets for sentiment analysis available to the public.
+
+Last but definitely not least, we'd like to thank our professor and guide at the TU/e M. Fang for his advice, feedback and input during the weekly meetings.
