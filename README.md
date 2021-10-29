@@ -3,10 +3,13 @@
 This is the repo of group 10 for the TU/eindhoven 2021 course 2AMM20 - Research Topics in Data Mining.
 
 The work and code done in this repo is based off of the research paper: 
+
 [EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks](https://arxiv.org/abs/1901.11196)
 
 Not included in this repo but required to run:
+
     - [OpenDutchWordnet](https://github.com/cltl/OpenDutchWordnet)
+    
     - [DBRD: Dutch Book Reviews Dataset](https://github.com/benjaminvdb/DBRD)
 
 ## Directory Structure
