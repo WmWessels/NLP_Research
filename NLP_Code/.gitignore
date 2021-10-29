@@ -3,3 +3,6 @@
 
 data/*
 eda_datasets/*
+results/*
+
+*.png
