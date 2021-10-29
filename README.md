@@ -12,6 +12,8 @@ Not included in this repo but required to run:
     
 [DBRD: Dutch Book Reviews Dataset](https://github.com/benjaminvdb/DBRD)
 
+[Dutch Word2Vec Model](https://github.com/coosto/dutch-word-embeddings)
+
 ## Directory Structure
 ```
     .
